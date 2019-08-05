@@ -5,7 +5,9 @@ const server = http.createServer((req,res)=>{
 	res.setHeader('Content-Type','text/plain');
 	res.end( "hello world");
 })
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
-server.listen(process.env.PORT || 5000,'127.0.0.1',()=>{
-	console.log('server running at http://127.0.0.1:3000/')
+server.listen(port ,host,()=>{
+	console.log('server started.....')
 })
