@@ -16,7 +16,7 @@ var uristring =
   'mongodb+srv://ganesh:ganeshdb@mytestcluster-ed0df.mongodb.net/test';
 
 app.get('/connectmgdb', (req, res) => {
-  mongoose.connect(uristring, function(err, res) {
+  mongoose.connect(uristring, function(err, res1) {
     if (err) {
       res.send('ERROR connecting to: ' + uristring + '. ' + err);
     } else {
