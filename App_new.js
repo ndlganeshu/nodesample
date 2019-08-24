@@ -9,6 +9,22 @@ app.get('/', (req, res) => {
   res.send('HHello world!');
 });
 
+// return the file
+app.get('/index.htm', function (req, res) {
+    res.sendFile( __dirname + "/" + "index.htm" );
+ })
+ 
+ // query params
+ app.get('/process_get', function (req, res) {
+    // Prepare output in JSON format
+    response = {
+       first_name:req.query.first_name,
+       last_name:req.query.last_name
+    };
+    console.log(response);
+    res.end(JSON.stringify(response));
+ })
+
 app.get('/bob', (req, res) => {
   res.send('HHello bob!');
 });
