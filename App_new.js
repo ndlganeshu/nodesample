@@ -12,7 +12,7 @@ app.get('/bob', (req, res) => {
 
 // /user/Ganesh
 app.get('/user/:name', (req, res) => {
-  res.send('HHello ', req.param('name'),'!');
+  res.send('HHello '+ req.param('name')+'!');
 });
 
 var uristring =
