@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 
+// /images/logo.jpg
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
   res.send('HHello world!');
 });
