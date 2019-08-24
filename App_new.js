@@ -10,6 +10,11 @@ app.get('/bob', (req, res) => {
   res.send('HHello bob!');
 });
 
+// /user/Ganesh
+app.get('/user/:name', (req, res) => {
+  res.send('HHello ', req.param('name'),'!');
+});
+
 var uristring =
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
