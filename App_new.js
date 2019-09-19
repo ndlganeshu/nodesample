@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
+var util = require('util');
 
 // /images/logo.jpg
 app.use(express.static('public'));
@@ -26,7 +27,8 @@ app.get('/index.htm', function (req, res) {
  })
 
 app.get('/bob', (req, res) => {
-  res.send('HHello bob!');
+  var txt = 'Hello %s from bob'
+  res.send(util.format(txt,'Ganesh'));
 });
 
 // /user/Ganesh
