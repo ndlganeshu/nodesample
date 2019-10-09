@@ -22,8 +22,20 @@ app.get('/index.htm', function (req, res) {
        first_name:req.query.first_name,
        last_name:req.query.last_name
     };
-    console.log(response);
-    res.end(JSON.stringify(response));
+    // console.log(response);
+   res.json(response);
+    // res.end(JSON.stringify(response));
+ })
+
+app.get('/getUser', function (req, res) {
+    // Prepare output in JSON format
+    response = {
+       first_name:req.query.first_name,
+       last_name:req.query.last_name
+    };
+    // console.log(response);
+   res.json(response);
+    // res.end(JSON.stringify(response));
  })
 
 app.get('/bob', (req, res) => {
