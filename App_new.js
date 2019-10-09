@@ -30,8 +30,8 @@ app.get('/index.htm', function (req, res) {
 app.get('/getUser', function (req, res) {
     // Prepare output in JSON format
     const response = {
-       first_name:req.query.first_name,
-       last_name:req.query.last_name
+       first_name:'Ganesh',
+       last_name: 'Nandi'
     };
     // console.log(response);
    res.json(response);
